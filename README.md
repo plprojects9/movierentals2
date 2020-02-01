@@ -1,4 +1,4 @@
-# movierentals2
+# Movierentals2
 Movie Rentals Application
 
 1. Spring Boot Project (Boot version: 2.2.4 & Java version: 1.8)
@@ -11,3 +11,9 @@ Movie Rentals Application
 8. Tested Rest end points with postman.
 9. MySql database as backend data repository.
 
+# Technologies/Frameworks
+1. Spring Boot
+2. Spring Data JPA
+
+# Database
+MySQL
