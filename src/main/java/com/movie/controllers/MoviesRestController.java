@@ -14,7 +14,7 @@ import com.movie.entities.Movie;
 import com.movie.repo.MoviesRepo;
 
 @RestController
-public class HomeController {
+public class MoviesRestController {
 		
 	@Autowired
 	private MoviesRepo moviesRepo;
