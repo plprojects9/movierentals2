@@ -10,6 +10,7 @@ Movie Rentals Application
 7. Implemented business object design pattern
 8. Tested Rest end points with postman.
 9. MySql database as backend data repository.
+10. Implemented a logger class using Spring AOP (Aspect oriented programming)
 
 # Technologies/Frameworks
 1. Spring Boot
