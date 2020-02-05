@@ -9,7 +9,7 @@ import com.movie.bo.AllMoviesView;
 import com.movie.bo.RentedMoviesView;
 import com.movie.entities.Movie;
 
-public interface MoviesRepo extends JpaRepository<Movie, Integer> {
+public interface IMovieRepo extends JpaRepository<Movie, Integer> {
 	
 	//inner join
 	@Query("SELECT new com.movie.bo.RentedMoviesView(c.id, c.firstName, c.lastName, m.title)"
