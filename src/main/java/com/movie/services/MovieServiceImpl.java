@@ -39,7 +39,7 @@ public class MovieServiceImpl implements IMovieService {
 	@Override
 	public String addNewMovie(Movie movie) {
 		
-		if(movie.getTitle() != null) {
+		if(movie.getTitle() != null && !movie.getTitle().isEmpty() && !movie.getCategory().isEmpty()) {
 			movieRepo.save(movie);
 			
 			return "Movie added successfully";
@@ -54,9 +54,14 @@ public class MovieServiceImpl implements IMovieService {
 		try {
 			Movie movie = movieRepo.findById(id).get();
 				
-			movie.setCategory(category);
-			movieRepo.save(movie);
-			
+			if(category != null && !category.isEmpty()) {
+				movie.setCategory(category);
+				movieRepo.save(movie);
+			}
+			else {
+				throw new Exception("Category is empty");
+			}
+				
 			return "Movie's category has been updated successfully";
 		} catch (Exception e){	
 			return "Please enter valid values for movie id & category";
